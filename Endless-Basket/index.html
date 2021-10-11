@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no">
+    <title>Endless-Basket</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+
+<body class="parent">
+    <div class="animation">
+        <canvas id="canvas" height="562.5" width="1476.23"></canvas>
+    </div>
+
+    <script src="https://unpkg.com/rive-js"></script>
+    <script>
+        const r = new rive.Rive({
+            src: 'basket.riv',
+            canvas: document.getElementById('canvas'),
+            autoplay: true,
+            layout: new rive.Layout({
+                fit: rive.Fit.Cover
+            }),
+        });
+    </script>
+</body>
+
+</html>
