@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+
+<body class="parent">
+    <div class="animation">
+        <canvas id="canvas" height="500" width="1000"></canvas>
+    </div>
+
+    <script src="https://unpkg.com/rive-js"></script>
+    <script>
+        const r = new rive.Rive({
+            src: 'animation.riv',
+            canvas: document.getElementById('canvas'),
+            autoplay: true,
+            layout: new rive.Layout({
+                fit: rive.Fit.Cover
+            }),
+        });
+    </script>
+</body>
+
+</html>
